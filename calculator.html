@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="calculator.css">
+        <script src="vue.js"></script>
+       
+    </head>
+    <body>
+       <div id ="app" class="calculator">
+         
+        <form action="">
+            <div class="input-container">
+                <input type="text" v-model="display" class="input">
+            </div>
+            <div class="side1">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button class="active" type="button">Shift</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button">ln</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Sin">sin</button>
+                    </div>
+                   
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button">DRG</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Log()">log</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Cos">cos</button>
+                    </div>
+                   
+                </div>
+               
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button">FML</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button">!</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Tan">tan</button>
+                    </div>
+                   
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button">MR</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="square()"> X2</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button"  @click="Sinh">sinh</button>
+                    </div>
+                   
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button">Save</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button">Xn</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button"  @click="Cosh">cosh</button>
+                    </div>
+                   
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button" @click="percentage()">%</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="SquareRoot">sqrt</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Tanh">tanh</button>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="side2">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button class="" type="button">(</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button">)</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="sign()">+/-</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button" class="point" @click="Delete()">DEL</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button"  class="point">AC</button>
+                    </div>
+                   
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button" @click="GetNumber(7)">7</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(8)">8</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(9)">9</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button"><-</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button">-></button>
+                    </div>
+                    
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button" @click="GetNumber(4)">4</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(5)">5</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(6)">6</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button" @click=" Mul()">*</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click=" Div()">/</button>
+                    </div>
+                    
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button" @click="GetNumber(1)">1</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(2)">2</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="GetNumber(3)">3</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button"  @click=" Add()" > + </button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click=" Sub()">-</button>
+                    </div>
+                    
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <button type="button" @click="GetNumber(0)">0</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="decimal">.</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="Exp">EXP</button>
+                    </div>
+                    <div class="flex-item">
+                        <button type="button">ANS</button>
+                    </div>
+                    <div class="flex-item">
+                        <button class="" type="button" @click="equal()">=</button>
+                    </div>
+                    
+                </div>
+            </div>
+           
+           
+        </form>
+       
+    </div>
+    <script src="script.js"></script>
+        
+    </body>
+      
+</html>

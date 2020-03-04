@@ -1,0 +1,163 @@
+
+body{
+    background-color: violet;
+    overflow-x: hidden
+    /* height: 90vh; */
+}
+form{
+    width: 50%;
+    transform: translateX(50%);
+    margin-top: 50px;
+    resize: none;
+    position: relative;
+    
+}
+.side1{
+    width: 20%;
+    resize: none;
+    /* position: absolute; */
+    position: absolute;
+}
+.side2{
+    width: 40%;
+    transform: translateX(79%);
+    float: right;
+    /* margin-top: -402px;
+    margin-right: 211px; */
+    position: absolute;
+    resize: none;
+}
+.flex-container{
+    display: flex;
+    
+}
+
+.side1 .flex-item button{
+    width: 80px;
+    height: 67px;
+    color: white;
+    background-color: black;
+    padding: 15px;
+     border: 1px solid #020311f6;
+     font-size: 20PX;
+     /* font-weight: bold; */
+}
+.side2 .flex-item button{
+    width: 80px;
+    height: 80px;
+    color: white;
+    background-color: #07070ef6;
+    padding: 10px;
+     border: 1px solid #020311f6;
+     font-size: 20PX;
+     /* font-weight: bold; */
+}
+.input{
+    width: 84%;
+    background-color: black;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    border: transparent;
+    height: 100px;
+}
+.input:focus{
+    outline: none;
+}
+.active{
+    background-color: yellow !important;
+}
+.point{
+    background-color: red !important;
+}
+@media only screen and (max-width: 360px) {
+    form{
+        margin-left: -60px;
+        margin-top: 150px;
+    }
+    .side1{
+        width: 50%;
+        display: none;
+    }
+    .side2{
+        width: 50%;
+        transform: translateX(0%);
+        
+    }
+    .input{
+        width: 175% !important;
+        font-size: 15px;
+        padding: 10px;
+        height: 50px;
+    }
+    .side1 .flex-item button{
+        width: 40px;
+        height: 37px;
+        
+         font-size: 12PX;
+         /* font-weight: bold; */
+    }
+    .side2 .flex-item button{
+        width: 60px;
+        height: 50px;
+       
+        padding: 5px;
+         font-size: 12PX;
+         /* font-weight: bold; */
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 960px) {
+    form{
+        width: 100%;
+        transform: translateX(0%);
+        margin-top: 150px;
+       
+        
+        
+    }
+    .side1{
+        width: 100%;
+        
+    }
+    .side2{
+        width: 100%;
+        transform: translateX(0%);
+        
+    }
+    .input{
+        width: 91% !important;
+    }
+    .side1 .flex-item button{
+        width: 50px;
+        height: 47px;
+        
+         font-size: 15PX;
+         /* font-weight: bold; */
+    }
+    .side2 .flex-item button{
+        width: 70px;
+        height: 60px;
+       
+        padding: 10px;
+         font-size: 15PX;
+         /* font-weight: bold; */
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .calculator {
+      width: 100vw;
+    }
+  }
+  
+  /* @media only screen and (min-width: 1280px) {
+    .calculator {
+      width: 20vw;
+    }
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    .calculator {
+      width: 15vw;
+    }
+  } */
